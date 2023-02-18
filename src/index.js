@@ -1,3 +1,7 @@
+const dom = document.createElement("div");
+const main = document.getElementsByTagName("main")[0];
+main.appendChild(dom);
+
 class Router {
     constructor() {
         this.routes = [];
@@ -19,8 +23,7 @@ class Router {
     }
 
     render(content) {
-        document.getElementById("anidthatmostwebsitesshouldnothavebecauseiftheydothatisweirdandthiswillavoidinterferancewithwebsites").innerHTML = content;
-
+        dom.innerHTML = content;
         // Replace local links with router.navigate
         const links = document.querySelectorAll('a');
         links.forEach(link => {
@@ -40,8 +43,7 @@ class Router {
             if (href && href.includes('window.location.href') && !href.startsWith('//') && !href.startsWith('http') && !href.startsWith('https')) {
                 link.addEventListener('click', event => {
                     event.stopPropagation();
-                    const href2 = href.match(/window.location.href\s*=\s*['"](.+?)['"]/)[1];
-                    router.navigate(href2);
+                    router.navigate(href.match(/window.location.href\s*=\s*['"](.+?)['"]/)[1]);
                 });
                 link.removeAttribute('onclick');
             }
