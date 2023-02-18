@@ -15,7 +15,7 @@ class Router {
         const route = this.routes.find(route => route.path === path);
 
         if (route) {
-            history.pushState({}, null, path);
+            history.replaceState({ path }, null, path);
             route.callback();
         } else {
             console.error(`Route not found: ${path}`);
@@ -49,7 +49,6 @@ class Router {
             }
         });
     }
-
 }
 
 const router = new Router();
@@ -62,4 +61,8 @@ pages.forEach(page => {
 
 window.addEventListener("load", () => {
     router.navigate(window.location.pathname);
+});
+
+window.addEventListener('popstate', () => {
+    router.navigate(window.location.pathname)
 });
