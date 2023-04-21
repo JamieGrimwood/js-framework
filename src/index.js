@@ -30,6 +30,7 @@ class Router {
             const href = link.getAttribute('href');
             if (href && !href.startsWith('//') && !href.startsWith('http') && !href.startsWith('https')) {
                 link.addEventListener('click', event => {
+                    if (href === "#") return
                     event.preventDefault();
                     this.navigate(href);
                 });
@@ -42,6 +43,7 @@ class Router {
             const href = link.getAttribute('onclick');
             if (href && href.includes('window.location.href') && !href.startsWith('//') && !href.startsWith('http') && !href.startsWith('https')) {
                 link.addEventListener('click', event => {
+                    if (href === "#") return
                     event.stopPropagation();
                     router.navigate(href.match(/window.location.href\s*=\s*['"](.+?)['"]/)[1]);
                 });
@@ -55,7 +57,7 @@ const router = new Router();
 
 pages.forEach(page => {
     router.add(page.path, () => {
-        router.render(page.content);
+        router.render(atob(page.content));
     });
 })
 
@@ -64,5 +66,6 @@ window.addEventListener("load", () => {
 });
 
 window.addEventListener('popstate', () => {
+    if (window.location.href === "#") return
     router.navigate(window.location.pathname)
 });

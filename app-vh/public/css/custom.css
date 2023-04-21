@@ -1,0 +1,262 @@
+/*---------------------------------------
+ *                                      *
+ *       Add Your Custom CSS Here       *
+ *                                      *
+ ---------------------------------------*/
+
+ .domain-search-holder .domain-input-holder button {
+    width: 100%;
+}
+
+.no-bg {
+    background-image: none !important;
+}
+
+h1, h2, h3 {
+    margin: inherit;
+}
+
+ @media (min-width: 768px) {
+  
+    .domain-search-holder .domain-input-holder button {
+        width: 40%;
+    }
+    
+}
+
+@media (max-width: 1199px) {
+    nav.navbar .navbar-nav.other-navbar {
+        display: none;
+    }
+}
+
+pre {
+    background: none;
+    border: none;
+}
+
+
+@media (max-width: 767px) {
+    #discord-server-support {
+        top: 20px;
+    }
+}
+
+.pagination {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pagination .page-item .page-link {
+    margin: 4px;
+}
+
+.sub-pricing .pricing-holder {
+    max-width: none;
+}
+
+/* Fixing the Services nav item with dropdown */
+nav.navbar .navbar-nav > li.dropdown > a:after {
+    display: block;
+}
+
+nav.navbar .navbar-nav > li.dropdown .dropdown-toggle {
+    opacity: 1 !important;
+}
+
+nav.navbar .navbar-nav > li.dropdown .dropdown-toggle {
+    opacity: 1 !important;
+}
+/* Editing the dropdown not to have a separator */
+
+/* nav.navbar .navbar-nav > li.dropdown .custom-dropdown-menu .dropdown-items-holder .items-with-icon {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+} */
+
+/* Features - image on right - from BlueRackHost */
+
+.layout-text {
+    padding: 70px 0px;
+}
+
+.gray-layout {
+    background: #F7F9FF;
+}
+
+.right-layout .text-container {
+    margin-left: 30px;
+}
+.layout-text .text-container h3 {
+    font-weight: 900;
+    font-size: 31px;
+}
+.layout-text h4 {
+    font-weight: 200;
+    margin: 35px 0 0;
+    font-size: 29px;
+}
+.layout-text h4 i {
+font-size: 23px;
+margin-right: 10px;
+}
+.layout-text .buttons {
+    margin-top: 35px;
+}
+
+.layout-text .text-container {
+    width: 500px;
+}
+.layout-text .img-absolute{
+    position: absolute;
+    top: -30PX;
+    left: -50px;
+    width: 110%;
+   opacity: .13 !important;
+    border: 0;
+    z-index: -12;
+}
+.layout-text img.white-bg {
+    padding: 10px;
+}
+.layout-text img {
+    border-radius: 10px;
+}
+.layout-text .img-shadow {
+    box-shadow: 0 0 50px rgba(53, 45, 97, 0.09);
+    padding: 0;
+}
+
+.layout-text .buttons i {
+    color: #ffffff;
+}
+.layout-text .buttons .btn {
+    box-shadow: 0 8px 40px rgba(18, 9, 39, 0.13);
+}
+.layout-text .text-content {
+    margin-top: 20px;
+}
+
+.layout-text p {
+    font-size: 16px;
+    line-height: 25px;
+}
+
+.layout-text .text {
+    overflow: hidden;
+}
+
+.layout-text .text-content i {
+    color: #14d468;
+    margin: 5px 8px 0 0;
+    font-size: 18px;
+}
+
+/* Testimonials - from BlueRackHost */
+.testimonials {
+    padding-top: 60px;
+    padding-bottom: 40px;
+    background: #F7F9FF;
+}
+
+.testimonials.white-bg {
+    background: #ffffff;
+}
+
+.testimonials.white-bg .main-title {
+    padding-bottom: 30px;
+    color: #4d5666;
+}
+
+.main-title h2 {
+    font-weight: 700;
+    font-size: 27px;
+}
+
+.main-title p {
+    font-size: 18px;
+    font-weight: 300;
+    color: #090a19;
+}
+.testimonials .text-left {
+    padding-right: 30px;
+}
+
+.testimonials .text-left h2 {
+    font-size: 26px;
+    margin-top: 60px;
+    font-weight: 700;
+}
+
+.testimonials .text-left .buttons {
+    margin-top: 30px;
+}
+
+.quote {
+    color: #4083f9;
+    text-align: center;
+    opacity: 0.5;
+    padding-left: 5px;
+}
+
+#fade-quote-carousel.carousel {
+    padding-bottom: 60px;
+}
+
+#fade-quote-carousel.carousel .carousel-inner .item {
+    opacity: 0;
+    transition: .5s linear;
+}
+
+#fade-quote-carousel.carousel .carousel-inner .active {
+    opacity: 1;
+}
+
+#fade-quote-carousel.carousel .carousel-indicators {
+    bottom: 0;
+}
+
+#fade-quote-carousel.carousel .carousel-indicators>li {
+    background-color: #ffc601;
+    border: none;
+    opacity: 0.8;
+    transition: width 0.3s ease;
+}
+
+#fade-quote-carousel blockquote {
+    text-align: left;
+    border: none;
+    font-size: 14px;
+    line-height: 23px;
+    background: #ffffff;
+    padding: 20px;
+    width: auto;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.testimonials.white-bg blockquote {
+    background: #F7F9FF !important;
+}
+
+#fade-quote-carousel blockquote small {
+    color: #d4c6e7;
+    font-size: 13px;
+    padding-top: 15px;
+}
+
+.carousel-indicators .active {
+    width: 60px;
+    height: 10px;
+    margin: 1px;
+}
+
+#fade-quote-carousel .profile-circle img {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 25px auto;
+    margin-bottom: -25px;
+    box-shadow: 0 10px 20px rgba(73, 61, 94, 0.3);
+    border-radius: 100%;
+}
